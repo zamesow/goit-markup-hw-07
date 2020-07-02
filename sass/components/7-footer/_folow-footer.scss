@@ -22,6 +22,8 @@
     line-height: 1.25;
     color: rgba(255, 255, 255, 0.6);
     background-color: transparent;
+
+    margin-top: 20px;
     padding: 15px 16px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
@@ -30,6 +32,10 @@
 
   .footer-folow__button {
     @include button-blue(10px 29px);
+
+    display: inline-flex;
+    align-items: center;
+    margin-top: 0;
     margin-left: 12px;
 
     .icon-send {
