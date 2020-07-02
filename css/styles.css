@@ -56,13 +56,6 @@ a {
   overflow: hidden;
 }
 
-/* ----------------все картинки масштабируем относительно размера */
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
 /*------------------- всё, что с цветом акцента */
 .logo,
 .header-nav__list .header-nav__link--active,
@@ -76,7 +69,6 @@ img {
 .header-address__link:focus .address-icon,
 .modal__form input:hover,
 .modal__close-btn:hover,
-.modal__close-btn:focus,
 .soc-link:focus,
 .clients__item:hover .clients__icon,
 .clients__item:focus,
@@ -92,9 +84,7 @@ button:focus,
 }
 
 /*------------------- основной фон */
-body,
-.team__item,
-.team__subtitle {
+body {
   background-color: var(--primary-white-color);
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
@@ -114,8 +104,6 @@ ul {
   padding-left: 15px;
   padding-right: 15px;
 
-  padding-left: 15px;
-  padding-right: 15px;
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -133,7 +121,7 @@ ul {
   font-size: 26px;
   line-height: 1.19;
 
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo__studio {
@@ -439,7 +427,7 @@ ul {
 .checkbox-hidden:checked + .modal__check-icon {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
-  background-image: url(../svg-full/modal-check.svg);
+  background-image: url(../images/modal-check.svg);
   background-size: contain;
   background-origin: border-box;
 }
@@ -557,36 +545,8 @@ ul {
   margin: 0px;
 }
 
-/* ----------------------- WORK SECTION */
-.work__subtitle {
-  margin: 0;
+/*-------------------WORK Чем мы занимаемся? */
 
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
-
-  color: var(--primary-white-color);
-}
-
-.work__item {
-  position: relative;
-}
-
-.work__box {
-  position: absolute;
-  bottom: 0;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 100%;
-  height: 70px;
-  background: rgba(47, 48, 58, 0.8);
-}
-
-/*------------------------ Чем мы занимаемся? */
 .work {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -610,6 +570,7 @@ ul {
   text-align: center;
   margin-top: 0;
   margin-bottom: 50px;
+  color: var(--title-text-color);
 }
 
 .work__list {
@@ -621,33 +582,41 @@ ul {
   text-align: center;
 }
 
+.work__item {
+  width: calc((100% - 60px) / 3);
+  position: relative;
+}
+
 .work__item:not(:last-child) {
   margin-right: 30px;
 }
 
-.work__item {
-  width: calc((100% - 60px) / 3);
+.work__box {
+  position: absolute;
+  bottom: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 70px;
+  background: rgba(47, 48, 58, 0.8);
 }
 
-.footer-soc-links__title,
-.footer-folow__title {
+.work__subtitle {
+  margin: 0;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-  text-align: center;
   text-transform: uppercase;
 
-  margin: 0px;
-  padding-top: 27px;
-  padding-bottom: 27px;
-  background-color: rgba(47, 48, 58, 0.8);
+  color: var(--primary-white-color);
 }
 
 /*----------------- Черные заголовки */
 .header-nav__link,
-.work__title,
-.team__title,
-.clients__title,
 .subtitle,
 .team__subtitle,
 .filter__btn {
@@ -837,7 +806,7 @@ ul {
 .footer {
   background-color: #2f303a;
   letter-spacing: 0.03em;
-  padding-top: 48px;
+  padding-top: 60px;
 }
 
 .footer__container {
@@ -883,6 +852,20 @@ ul {
 }
 
 /* ----------------------- FOOTER SOCIAL LINKS */
+
+.footer-soc-links__title,
+.footer-folow__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+
+  margin: 0px;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  background-color: rgba(47, 48, 58, 0.8);
+}
 
 .footer-soc-links {
   padding: 0;
@@ -945,17 +928,18 @@ ul {
 
 .footer-folow__button {
   display: inline-flex;
-  height: 50px;
-  padding: 9px 28px;
+  padding: 10px 29px;
   margin-left: 12px;
   text-decoration: none;
   align-items: center;
 
-  background-color: var(--accent-color);
-  color: var(--primary-white-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border: 1px solid transparent;
+  border: none;
   border-radius: 4px;
+
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .footer-folow__button:focus {
@@ -965,20 +949,6 @@ ul {
 .icon-send {
   margin-left: 10px;
   fill: var(--primary-white-color);
-}
-
-/*------------------------------ Copyrights */
-.copy {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 2;
-  letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.4);
-  padding-top: 18px;
-  padding-bottom: 20px;
-  text-align: center;
-  margin: 0;
-  border-top: 1px solid rgba(255, 255, 0255, 0.1);
 }
 
 /* ------------------------------ buttons */

@@ -12,7 +12,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.6.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <!-- Шапка сайта -->
@@ -59,7 +59,7 @@
         </a>
       </address>
     </header>
-    <main class="main">
+    <main class="main-index">
       <!-- Герой -->
 
       <section class="hero">
@@ -472,22 +472,23 @@
           <label class="footer-folow__title" for="folow"
             >Подпишитесь на рассылку</label
           >
-          <input
-            class="footer-folow__input"
-            type="email"
-            name="email"
-            id="folow"
-            placeholder="E-mail"
-          />
-          <button type="button" class="footer-folow__button">
-            Подписаться
-            <svg class="icon-send" width="24" height="24">
-              <use href="./images/sprite.svg#icon-send"></use>
-            </svg>
-          </button>
+          <div class="folow-box">
+            <input
+              class="footer-folow__input"
+              type="email"
+              name="email"
+              id="folow"
+              placeholder="E-mail"
+            />
+            <button type="button" class="footer-folow__button">
+              Подписаться
+              <svg class="icon-send" width="24" height="24">
+                <use href="./images/sprite.svg#icon-send"></use>
+              </svg>
+            </button>
+          </div>
         </form>
       </div>
-      <p class="copy">2020 | Developed by GoIT Students</p>
     </footer>
 
     <!-- Модалка -->
@@ -497,7 +498,7 @@
         <p class="modal__title">Оставьте свои данные, мы вам перезвоним</p>
         <button class="modal__close-btn" data-modal-close>
           <svg class="modal__close-icon" width="100%" height="100%">
-            <use href="../images/close.svg#close"></use>
+            <use href="./images/modal-sprite.svg#modal-close"></use>
           </svg>
         </button>
 
@@ -508,7 +509,7 @@
               width="18"
               height="18"
             >
-              <use href="../images/modal-sprite.svg#modal-name"></use>
+              <use href="./images/modal-sprite.svg#modal-name"></use>
             </svg>
           </span>
           <input
@@ -528,7 +529,7 @@
               width="18"
               height="18"
             >
-              <use href="../images/modal-sprite.svg#modal-phone"></use>
+              <use href="./images/modal-sprite.svg#modal-phone"></use>
             </svg>
           </span>
           <input
@@ -550,7 +551,7 @@
               width="18"
               height="18"
             >
-              <use href="../images/modal-sprite.svg#modal-email"></use>
+              <use href="./images/modal-sprite.svg#modal-email"></use>
             </svg>
           </span>
           <input

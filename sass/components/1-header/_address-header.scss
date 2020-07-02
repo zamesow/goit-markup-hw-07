@@ -1,0 +1,31 @@
+.header-address {
+  display: inline-flex;
+  align-items: center;
+
+  &__link {
+    color: $primary-text-color;
+    font-style: normal;
+    display: inline-flex;
+    align-items: center;
+
+    @include transform(color);
+
+    &:hover,
+    &:focus,
+    &:hover .address-icon,
+    &:focus .address-icon {
+      color: $accent-color;
+      fill: $accent-color;
+    }
+
+    &--mail {
+      margin-right: 30px;
+    }
+  }
+
+  .address-icon {
+    fill: $primary-text-color;
+    margin-right: 10px;
+    transition: fill $cubic;
+  }
+}
