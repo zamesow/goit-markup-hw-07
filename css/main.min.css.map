@@ -5,7 +5,7 @@
         "../sass/main.scss",
         "../sass/utils/_variables.scss",
         "../sass/utils/_modern-normalize-css.scss",
-        "../sass/styles/_placeholders.scss",
+        "../sass/utils/_placeholders.scss",
         "../sass/components/1-header/_page-header.scss",
         "../sass/components/_section-border.scss",
         "../sass/components/_logo.scss",
