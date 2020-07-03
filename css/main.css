@@ -321,7 +321,7 @@ summary {
   text-align: center;
 }
 
-.features .visually-hidden, .checkbox-hidden {
+.features .visually-hidden, .checkbox-hidden, .visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -341,6 +341,13 @@ summary {
   line-height: 1.19;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header .logo:focus,
+.footer .logo:focus {
+  border: 2px solid #2196f3;
+  border-radius: 4px;
+  outline: none;
 }
 
 .header {
@@ -395,6 +402,12 @@ summary {
   color: #2196f3;
 }
 
+.header-nav__link:focus {
+  border: 2px solid #2196f3;
+  border-radius: 4px;
+  outline: none;
+}
+
 .header-nav__link--active::before {
   content: '';
   position: absolute;
@@ -432,6 +445,12 @@ summary {
   color: #2196f3;
 }
 
+.header-address__link:focus {
+  border: 2px solid #2196f3;
+  border-radius: 4px;
+  outline: none;
+}
+
 .header-address__link--mail {
   margin-right: 30px;
 }
@@ -446,6 +465,14 @@ summary {
 .header-address__link:hover .address-icon,
 .header-address__link:focus .address-icon {
   fill: #2196f3;
+}
+
+.hero__button:focus,
+.modal__send-btn:focus,
+.footer-folow__button:focus {
+  border: 2px solid #2196f3;
+  border-radius: 4px;
+  outline: none;
 }
 
 .hero {
@@ -500,15 +527,6 @@ summary {
   background-color: #2196f3;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
-
-.hero__button .hero__button:focus,
-.hero__button .modal__send-btn:focus,
-.hero__button .footer-folow__button:focus,
-.modal__send-btn .hero__button:focus,
-.modal__send-btn .modal__send-btn:focus,
-.modal__send-btn .footer-folow__button:focus {
-  color: #2196f3;
 }
 
 .features__title {
@@ -712,6 +730,10 @@ summary {
   background-color: #2196f3;
 }
 
+.soc-links .soc-link:focus {
+  outline: none;
+}
+
 .soc-links .soc-link:hover .soc-links__icon,
 .soc-links .soc-link:focus .soc-links__icon {
   fill: #ffffff;
@@ -736,20 +758,10 @@ summary {
 .clients__item {
   width: calc((100% - 5 * 30px) / 6);
   height: 90px;
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
-  -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients__item:not(:last-child) {
   margin-right: 30px;
-}
-
-.clients__item:hover {
-  border: 1px solid #2196f3;
-  color: #2196f3;
-  fill: #2196f3;
 }
 
 .clients__link {
@@ -765,10 +777,22 @@ summary {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.clients__link:hover {
+  border: 1px solid #2196f3;
+  color: #2196f3;
+  fill: #2196f3;
 }
 
 .clients__link:focus {
-  border: 1px solid #2196f3;
+  border: 2px solid #2196f3;
+  border-radius: 4px;
+  outline: none;
 }
 
 .clients__icon {
@@ -863,6 +887,12 @@ summary {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.footer__container .footer-address-cont .address__link:focus {
+  border: 2px solid #2196f3;
+  border-radius: 4px;
+  outline: none;
+}
+
 .footer__container .footer-address-cont .address__link--email {
   margin-top: 9px;
   margin-bottom: 9px;
@@ -898,6 +928,14 @@ summary {
   fill: #ffffff;
 }
 
+.footer__container .hero__button:focus,
+.footer__container .modal__send-btn:focus,
+.footer__container .footer-folow__button:focus {
+  border: 2px solid #2196f3;
+  border-radius: 4px;
+  outline: none;
+}
+
 .footer__container .footer-folow {
   margin-left: auto;
 }
@@ -927,7 +965,13 @@ summary {
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-.footer__container .footer-folow .footer-folow__button {
+.footer__container .footer-folow__input:focus {
+  border: 2px solid #2196f3;
+  border-radius: 4px;
+  outline: none;
+}
+
+.footer__container .footer-folow__button {
   display: inline-block;
   padding: 10px 29px;
   margin-top: 30px;
@@ -950,13 +994,7 @@ summary {
   margin-left: 12px;
 }
 
-.footer__container .footer-folow .footer-folow__button .hero__button:focus,
-.footer__container .footer-folow .footer-folow__button .modal__send-btn:focus,
-.footer__container .footer-folow .footer-folow__button .footer-folow__button:focus {
-  color: #2196f3;
-}
-
-.footer__container .footer-folow .footer-folow__button .icon-send {
+.footer__container .footer-folow__button .icon-send {
   margin-left: 10px;
   fill: #ffffff;
 }
@@ -1037,10 +1075,6 @@ summary {
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-
-.modal__send-btn:focus {
-  color: #2196f3;
 }
 
 .modal__input {
@@ -1201,5 +1235,60 @@ summary {
 .modal-item:focus-within .modal-item-icon {
   fill: #2196f3;
   color: #2196f3;
+}
+
+.filter {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.filter__buttons {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.filter__btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  text-align: center;
+  display: inline-block;
+  border-radius: 4px;
+  padding: 6px 22px;
+  border: 1px solid transparent;
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.filter__btn:hover, .filter__btn:focus {
+  background-color: #2196f3;
+  color: #ffffff;
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.1);
+}
+
+.section-title-item {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: #212121;
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+
+.section-text-item {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.88;
+  color: #757575;
+  margin: 0;
 }
 /*# sourceMappingURL=main.css.map */

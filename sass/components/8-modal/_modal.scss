@@ -45,10 +45,6 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-
-    &:focus {
-      color: $accent-color;
-    }
   }
 
   &__input {

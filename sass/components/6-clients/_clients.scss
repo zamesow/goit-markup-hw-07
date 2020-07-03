@@ -20,18 +20,9 @@
   &__item {
     width: calc((100% - 5 * 30px) / 6);
     height: 90px;
-    border: 1px solid $icons-grey-color;
-    border-radius: 4px;
-    transition: border $cubic;
 
     &:not(:last-child) {
       margin-right: 30px;
-    }
-
-    &:hover {
-      border: 1px solid $accent-color;
-      color: $accent-color;
-      fill: $accent-color;
     }
   }
   &__link {
@@ -42,8 +33,20 @@
     justify-content: center;
     align-items: center;
 
-    &:focus {
+    border: 1px solid $icons-grey-color;
+    border-radius: 4px;
+    transition: border $cubic;
+
+    &:hover {
       border: 1px solid $accent-color;
+      color: $accent-color;
+      fill: $accent-color;
+    }
+
+    &:focus {
+      border: 2px solid $accent-color;
+      border-radius: 4px;
+      outline: none;
     }
   }
 

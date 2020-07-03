@@ -28,6 +28,12 @@
       color: $accent-color;
     }
 
+    &:focus {
+      border: 2px solid $accent-color;
+      border-radius: 4px;
+      outline: none;
+    }
+
     &--active::before {
       content: '';
       position: absolute;

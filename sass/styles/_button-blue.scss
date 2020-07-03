@@ -14,10 +14,11 @@
   background-color: $accent-color;
 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-
-  .hero__button:focus,
-  .modal__send-btn:focus,
-  .footer-folow__button:focus {
-    color: $accent-color;
-  }
+}
+.hero__button:focus,
+.modal__send-btn:focus,
+.footer-folow__button:focus {
+  border: 2px solid $accent-color;
+  border-radius: 4px;
+  outline: none;
 }

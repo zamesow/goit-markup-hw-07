@@ -40,6 +40,10 @@
       background-color: $accent-color;
     }
 
+    &:focus {
+      outline: none;
+    }
+
     &:hover .soc-links__icon,
     &:focus .soc-links__icon {
       fill: $primary-white-color;

@@ -20,10 +20,10 @@
   &__item {
     width: calc((100% - 2 * 30px) / 3);
     position: relative;
-  }
 
-  &__item:not(:last-child) {
-    margin-right: 30px;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 
   &__box {
