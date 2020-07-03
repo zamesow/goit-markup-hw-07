@@ -12,15 +12,15 @@
   }
 
   &__item {
-    position: relative;
-
     padding-top: 32px;
     padding-bottom: 32px;
   }
 
   &__link {
+    position: relative;
     color: $title-text-color;
     transition: color $cubic;
+    padding-bottom: 32px;
 
     &:hover,
     &--active {
