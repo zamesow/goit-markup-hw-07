@@ -8,24 +8,25 @@
     display: inline-flex;
     align-items: center;
 
-    @include transform(color);
+    @include transition(color);
 
     &:hover,
-    &:focus,
-    &:hover .address-icon,
-    &:focus .address-icon {
+    &:focus {
       color: $accent-color;
-      fill: $accent-color;
     }
 
     &--mail {
       margin-right: 30px;
     }
   }
+}
+.address-icon {
+  fill: $primary-text-color;
+  margin-right: 10px;
+  @include transition(fill);
 
-  .address-icon {
-    fill: $primary-text-color;
-    margin-right: 10px;
-    transition: fill $cubic;
+  .header-address__link:hover &,
+  .header-address__link:focus & {
+    fill: $accent-color;
   }
 }

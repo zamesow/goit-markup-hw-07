@@ -5,5 +5,5 @@
   font-size: 26px;
   line-height: 1.19;
 
-  @include transform(color);
+  @include transition(color);
 }

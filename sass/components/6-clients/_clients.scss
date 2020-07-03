@@ -28,14 +28,9 @@
       margin-right: 30px;
     }
 
-    &:hover,
-    &:focus {
+    &:hover {
       border: 1px solid $accent-color;
       color: $accent-color;
-      fill: $accent-color;
-    }
-
-    &:hover .clients__icon {
       fill: $accent-color;
     }
   }
@@ -46,6 +41,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    &:focus {
+      border: 1px solid $accent-color;
+    }
   }
 
   &__icon {
@@ -75,6 +74,10 @@
     &--six {
       width: 89px;
       height: 46px;
+    }
+    .clients__link:hover &,
+    .clients__link:focus & {
+      fill: $accent-color;
     }
   }
 }
